@@ -14,11 +14,11 @@ if [ ! -f "/system/fonts/opensans_regular.ttf" ]; then
     mount -o ro,remount /system
 fi
 
-if [ "$(getprop persist.sys.locale)" != "ko-KR" ]; then
-    setprop persist.sys.locale ko-KR
-    setprop persist.sys.language ko
-    setprop persist.sys.country KR
-    setprop persist.sys.timezone Asia/Seoul
+if [ "$(getprop persist.sys.locale)" != "zh-TW" ]; then
+    setprop persist.sys.locale zh-TW
+    setprop persist.sys.language zh-TW
+    setprop persist.sys.country TW
+    setprop persist.sys.timezone Asia/Taipei
 
     sleep 2
     reboot
