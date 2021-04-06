@@ -40,6 +40,14 @@ class CarInterface(CarInterfaceBase):
     ret.steerLimitTimer = 0.8
     tire_stiffness_factor = 1.
 
+    ret.maxSteeringAngleDeg = 90.
+    ret.startAccel = 1.0
+
+    eps_modified = False
+    for fw in car_fw:
+      if fw.ecu == "eps" and b"," in fw.fwVersion:
+        eps_modified = True
+
     # genesis
     if candidate == CAR.GENESIS:
       ret.mass = 1900. + STD_CARGO_KG
@@ -86,6 +94,7 @@ class CarInterface(CarInterfaceBase):
       ret.mass = 1395. + STD_CARGO_KG
       ret.wheelbase = 2.6
       tire_stiffness_factor = 0.385
+      ret.maxSteeringAngleDeg = 120.
     elif candidate in [CAR.IONIQ, CAR.IONIQ_EV_LTD]:
       ret.mass = 1490. + STD_CARGO_KG   #weight per hyundai site https://www.hyundaiusa.com/ioniq-electric/specifications.aspx
       ret.wheelbase = 2.7
@@ -184,7 +193,7 @@ class CarInterface(CarInterfaceBase):
     else:
       # scc smoother
       ret.longitudinalTuning.kpBP = [0., 10. * CV.KPH_TO_MS, 40. * CV.KPH_TO_MS, 100. * CV.KPH_TO_MS]
-      ret.longitudinalTuning.kpV = [1.3, 1.2, 1.0, 0.45]
+      ret.longitudinalTuning.kpV = [1.0, 0.8, 0.5, 0.25]
       ret.longitudinalTuning.kiBP = [0.]
       ret.longitudinalTuning.kiV = [0.]
       ret.longitudinalTuning.deadzoneBP = [0., 40]
