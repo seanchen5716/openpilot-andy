@@ -14,9 +14,9 @@ if [ ! -f "/system/fonts/opensans_regular.ttf" ]; then
     mount -o ro,remount /system
 fi
 
-if [ "$(getprop persist.sys.locale)" != "zh-TW" ]; then
+if [ "$(getprop persist.sys.language)" != "zh" ]; then
     setprop persist.sys.locale zh-TW
-    setprop persist.sys.language zh-TW
+    setprop persist.sys.language zh
     setprop persist.sys.country TW
     setprop persist.sys.timezone Asia/Taipei
 
