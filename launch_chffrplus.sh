@@ -15,9 +15,9 @@ if [ ! -f "/system/fonts/opensans_regular.ttf" ]; then
 fi
 
 if [ "$(getprop persist.sys.locale)" != "zh-TW" ]; then
-    setprop persist.sys.locale zh-TW
-    setprop persist.sys.language zh
-    setprop persist.sys.country TW
+    setprop persist.sys.locale en-US
+    setprop persist.sys.language en
+    setprop persist.sys.country US
     setprop persist.sys.timezone Asia/Taipei
 
     sleep 2
