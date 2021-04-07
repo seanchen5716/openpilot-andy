@@ -21,7 +21,7 @@ if [ "$(getprop persist.sys.locale)" != "zh-TW" ]; then
     setprop persist.sys.timezone Asia/Taipei
 
     sleep 2
-    reboot
+    #reboot
 fi
 
 if [ -z "$BASEDIR" ]; then
