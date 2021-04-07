@@ -173,7 +173,7 @@ class CarInterface(CarInterfaceBase):
     if ret.openpilotLongitudinalControl:
 
       ret.longitudinalTuning.kpBP = [0., 10. * CV.KPH_TO_MS, 20. * CV.KPH_TO_MS, 40. * CV.KPH_TO_MS, 100. * CV.KPH_TO_MS]
-      ret.longitudinalTuning.kpV = [0.97, 0.82, 0.63, 0.58, 0.43]
+      ret.longitudinalTuning.kpV = [0.1, 0.08, 0.06, 0.03, 0.01]
       ret.longitudinalTuning.kiBP = [0.]
       ret.longitudinalTuning.kiV = [0.015]
       ret.longitudinalTuning.kf = 0.55
@@ -193,7 +193,7 @@ class CarInterface(CarInterfaceBase):
     else:
       # scc smoother
       ret.longitudinalTuning.kpBP = [0., 10. * CV.KPH_TO_MS, 40. * CV.KPH_TO_MS, 100. * CV.KPH_TO_MS]
-      ret.longitudinalTuning.kpV = [1.0, 0.8, 0.5, 0.25]
+      ret.longitudinalTuning.kpV = [0.1, 0.08, 0.05, 0.02]
       ret.longitudinalTuning.kiBP = [0.]
       ret.longitudinalTuning.kiV = [0.]
       ret.longitudinalTuning.deadzoneBP = [0., 40]
