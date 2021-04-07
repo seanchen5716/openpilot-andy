@@ -15,12 +15,12 @@ if [ ! -f "/system/fonts/opensans_regular.ttf" ]; then
 fi
 
 if [ "$(getprop persist.sys.locale)" != "ko-KR" ]; then
-    setprop persist.sys.locale ko-KR
-    setprop persist.sys.language ko
-    setprop persist.sys.country KR
-    setprop persist.sys.timezone Asia/Taipei
+    #setprop persist.sys.locale ko-KR
+    #setprop persist.sys.language ko
+    #setprop persist.sys.country KR
+    #setprop persist.sys.timezone Asia/Taipei
 
-    sleep 2
+    #sleep 2
     #reboot
 fi
 
