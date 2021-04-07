@@ -16,9 +16,9 @@ fi
 
 if [ "$(getprop persist.sys.locale)" != "ko-KR" ]; then
     setprop persist.sys.locale ko-KR
-    setprop persist.sys.language zh
-    setprop persist.sys.country TW
-    setprop persist.sys.timezone Asia/Taiwan
+    setprop persist.sys.language ko
+    setprop persist.sys.country KR
+    setprop persist.sys.timezone Asia/Taipei
 
     sleep 2
     #reboot
