@@ -168,7 +168,7 @@ class CarInterface(CarInterfaceBase):
     ret.steerRateCost = 1.
 
     ret.steerMaxBP = [0.]
-    ret.steerMaxV = [0.2]
+    ret.steerMaxV = [0.5]
 
     if ret.openpilotLongitudinalControl:
 
