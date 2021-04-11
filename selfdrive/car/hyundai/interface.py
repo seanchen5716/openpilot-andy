@@ -151,7 +151,7 @@ class CarInterface(CarInterfaceBase):
 
     ret.lateralTuning.init('lqr')
 
-    ret.lateralTuning.lqr.scale = 2500.
+    ret.lateralTuning.lqr.scale = 2800.
     ret.lateralTuning.lqr.ki = 0.008
     ret.lateralTuning.lqr.dcGain = 0.003
 
@@ -168,7 +168,7 @@ class CarInterface(CarInterfaceBase):
     ret.steerRateCost = 1.
 
     ret.steerMaxBP = [0.]
-    ret.steerMaxV = [0.5]
+    ret.steerMaxV = [0.2]
 
     if ret.openpilotLongitudinalControl:
 
